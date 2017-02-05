@@ -59,6 +59,14 @@ describe('dialog module', () => {
       assert.throws(() => {
         dialog.showMessageBox({detail: 3.14})
       }, /Detail must be a string/)
+
+      assert.throws(() => {
+        dialog.showMessageBox({checkboxTitle: false, callback: () => {}})
+      }, /checkboxTitle must be a string/)
+
+      assert.throws(() => {
+        dialog.showMessageBox({checkboxTitle: 'foo'})
+      }, /Checkbox is supported only when using callback/)
     })
   })
 
