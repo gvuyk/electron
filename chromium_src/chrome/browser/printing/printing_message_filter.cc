@@ -299,8 +299,6 @@ void PrintingMessageFilter::OnInitSettingWithDeviceName(const base::string16& de
       0,
       false,
       DEFAULT_MARGINS,
-      true,
-      true,
       device_name,
       base::Bind(&PrintingMessageFilter::OnGetDefaultPrintSettingsReply,
                  this,
